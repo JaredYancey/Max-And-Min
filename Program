@@ -1,0 +1,70 @@
+	import java.util.Scanner;
+public class program {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int input, maximum;
+		int [] list;
+		
+		
+		System.out.println("How many numbers are there?");
+		input = sc.nextInt();
+		list = new int [input];
+		
+		
+		for(int i=0; i<list.length; i++){
+		System.out.println("Enter an integer");
+		list[i] = sc.nextInt();
+		}
+		
+		
+		
+		for(int i = 0; i<list.length; i++){
+			System.out.println(list[i]);
+		}
+		int min;
+		min = minumum(list);
+		int max;
+		max = maximum(list);
+		System.out.println("the largest number is " + max);
+		System.out.println("the smallest number is " + min);
+		}
+		
+	
+	public static int maximum(int [] list){
+		int largest;
+		largest = list[0];
+		
+		
+		for(int i=1; i<list.length; i++){
+			System.out.println("Comparing " + list[i] + " with the biggest number we have seen so far..");
+			if(list[i] > largest){
+				largest = list[i];
+				System.out.println("OHH!!! I Found a bigger one!!");
+			}
+			System.out.println();
+		}
+		
+		return largest;
+	}
+	
+	
+	
+	
+	public static int minumum(int [] list){
+		int smallest;
+		smallest = list[0];
+		
+		
+		for(int i=1; i<list.length; i++){
+			System.out.println("Comparing " + list[i] + " with the smallest number we have seen so far..");
+			if(list[i] < smallest){
+				smallest = list[i];
+				System.out.println("OHH!!! I Found a smaller one!!");
+			}
+			System.out.println();
+		}
+		return smallest;
+	}
+}
